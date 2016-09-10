@@ -10,4 +10,6 @@
     <string name="search_title">Search</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">closed</string>
 </resources>
