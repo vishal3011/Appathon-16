@@ -28,7 +28,7 @@
         android:paddingRight="20dp"
         >
         <EditText
-            android:id="@+id/uIDBox"
+            android:id="@+id/editTextUsername"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/customeditbox"
@@ -43,7 +43,7 @@
             />
 
         <EditText
-            android:id="@+id/passBox"
+            android:id="@+id/editTextPassword"
             android:layout_marginTop="15dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
 
         <Button
             android:layout_marginTop="65dp"
-            android:id="@+id/loginButtonId"
+            android:id="@+id/buttonLogin"
             android:layout_width="fill_parent"
             android:layout_height="50sp"
             android:background="#6FDC8A"
