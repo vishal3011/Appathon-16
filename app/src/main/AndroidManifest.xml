@@ -47,6 +47,13 @@
                 android:value=".LoginActivity"
                  />
         </activity>
+        <activity android:name=".EditPostActivity"
+            android:label = "EditPostActivity"
+            android:parentActivityName=".ActivityUserProfile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityUserProfile"></meta-data>
+        </activity>
     </application>
 
 </manifest>
