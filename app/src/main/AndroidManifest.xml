@@ -4,16 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <intent-filter>
-        <action android:name="android.intent.action.SEARCH" />
-    </intent-filter>
 
-    <meta-data
-        android:name="android.app.default_searchable"
-        android:value="com.example.ExampleActivity" />
-    <meta-data
-        android:name="android.app.searchable"
-        android:resource="@xml/searchable" />
+
+
 
     <application
         android:allowBackup="true"
@@ -35,7 +28,7 @@
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.simplifiedcoding.volleyinsertdata.MainActivity" />
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".ActivityUserProfile"
@@ -43,7 +36,8 @@
             android:parentActivityName=".LoginActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.simplifiedcoding.volleyinsertdata.LoginActivity" />
+                android:value=".LoginActivity"
+                 />
         </activity>
     </application>
 

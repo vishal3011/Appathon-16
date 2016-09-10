@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
-        buttonLogin.setOnClickListener(this);
+
     }
 
 
@@ -98,5 +98,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         userLogin();
+    }
+
+    public void login_click(View view) {
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }
