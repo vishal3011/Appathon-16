@@ -97,7 +97,7 @@
                             android:layout_height="60dp"
                             android:background="@mipmap/ic_launcher"
                             android:gravity="center_vertical|center_horizontal"
-                            android:text="A"
+                            android:text="V"
                             android:textColor="@color/primaryColor"
                             android:textSize="30dp" />
 
