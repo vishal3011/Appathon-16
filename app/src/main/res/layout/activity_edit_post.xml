@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id = "@+id/post_title"
         android:text = "post"
-        android:textSize="34dp"/>
+        android:textSize="34sp"/>
 
     <Spinner
         android:layout_width="match_parent"
