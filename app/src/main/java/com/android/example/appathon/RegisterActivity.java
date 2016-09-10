@@ -23,19 +23,29 @@ import java.util.Map;
  * Created by Vishal on 10-09-2016.
  */
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
-    private static final String REGISTER_URL = "http://simplifiedcoding.16mb.com/UserRegistration/volleyRegister.php";
+    private static final String REGISTER_URL = "http://rajukoushik.pythonanywhere.com/api/register";
 
-    public static final String KEY_USERNAME = "username";
+    public static final String KEY_USERNAME = "user_name";
     public static final String KEY_PASSWORD = "password";
     public static final String KEY_EMAIL = "email";
+    public static final String KEY_AGE = "age";
+    public static final String KEY_FIRSTNAME = "first_name";
+    public static final String KEY_LASTNAME = "last_name";
+
+
+
 
 
     private EditText editTextUsername;
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private EditText editTextFirstName;
+    private EditText editTextLastName;
+    private EditText editTextAge;
+
 
     private Button buttonRegister;
-    private Button buttonLogin;
+
 
 
     @Override
@@ -46,18 +56,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextEmail= (EditText) findViewById(R.id.editTextEmail);
+        editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
+        editTextLastName = (EditText) findViewById(R.id.editTextLastName);
+        editTextAge = (EditText) findViewById(R.id.editTextAge);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+
 
         buttonRegister.setOnClickListener(this);
-        buttonLogin.setOnClickListener(this);
+
     }
 
     private void registerUser(){
         final String username = editTextUsername.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
+        final String age = editTextAge.getText().toString().trim();
+        final String firstname = editTextFirstName.getText().toString().trim();
+        final String lastname =  editTextLastName.getText().toString().trim();
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                 new Response.Listener<String>() {
@@ -78,6 +95,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 params.put(KEY_USERNAME,username);
                 params.put(KEY_PASSWORD,password);
                 params.put(KEY_EMAIL, email);
+                params.put(KEY_AGE, age);
+                params.put(KEY_FIRSTNAME, firstname);
+                params.put(KEY_LASTNAME, lastname);
                 return params;
             }
 
