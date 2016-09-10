@@ -68,12 +68,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void registerUser(){
-        final String username = editTextUsername.getText().toString().trim();
+        final String user_name = editTextUsername.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
         final String age = editTextAge.getText().toString().trim();
-        final String firstname = editTextFirstName.getText().toString().trim();
-        final String lastname =  editTextLastName.getText().toString().trim();
+        final String first_name = editTextFirstName.getText().toString().trim();
+        final String last_name =  editTextLastName.getText().toString().trim();
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
@@ -92,12 +92,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
-                params.put(KEY_USERNAME,username);
+                params.put(KEY_USERNAME,user_name);
                 params.put(KEY_PASSWORD,password);
                 params.put(KEY_EMAIL, email);
                 params.put(KEY_AGE, age);
-                params.put(KEY_FIRSTNAME, firstname);
-                params.put(KEY_LASTNAME, lastname);
+                params.put(KEY_FIRSTNAME, first_name);
+                params.put(KEY_LASTNAME, last_name);
                 return params;
             }
 
