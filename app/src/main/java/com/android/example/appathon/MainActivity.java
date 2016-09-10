@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private static final String REGISTER_URL = "http://simplifiedcoding.16mb.com/UserRegistration/volleyRegister.php";
 
@@ -46,58 +46,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        editTextEmail= (EditText) findViewById(R.id.editTextEmail);
-
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        buttonLogin = (Button) findViewById(R.id.buttonLogin);
-
-        buttonRegister.setOnClickListener(this);
-        buttonLogin.setOnClickListener(this);
-    }
-
-    private void registerUser(){
-        final String username = editTextUsername.getText().toString().trim();
-        final String password = editTextPassword.getText().toString().trim();
-        final String email = editTextEmail.getText().toString().trim();
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(MainActivity.this,response,Toast.LENGTH_LONG).show();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this,error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                }){
+        buttonRegister= (Button)findViewById(R.id.buttonRegister);
+        buttonLogin=(Button)findViewById(R.id.buttonLogin);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<String, String>();
-                params.put(KEY_USERNAME,username);
-                params.put(KEY_PASSWORD,password);
-                params.put(KEY_EMAIL, email);
-                return params;
+            public void onClick(View view) {
+                Intent i= new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
             }
-
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        });
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j= new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(j);
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        if(v == buttonRegister){
-            registerUser();
-        }
-        if(v == buttonLogin){
-            startActivity(new Intent(this,LoginActivity.class));
-        }
-    }
+
+
 }

@@ -31,6 +31,14 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".ActivityUserProfile"
             android:label="@string/title_activity_activity_user_profile"
             android:parentActivityName=".LoginActivity" >

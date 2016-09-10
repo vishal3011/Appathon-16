@@ -83,7 +83,7 @@
             android:background="#6FDC8A"
             android:fontFamily="segoe UI"
             android:gravity="center"
-            android:onClick="login_click"
+
             android:textColor="#ffffff"
             android:text="LOGIN"
             android:textSize="15sp"

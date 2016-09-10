@@ -8,4 +8,6 @@
     <string name="cardView">cardView</string>
     <string name="search">Search</string>
     <string name="search_title">Search</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>

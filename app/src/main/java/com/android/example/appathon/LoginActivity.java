@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
-
+        Intent i=getIntent();
 
     }
 
@@ -105,4 +105,5 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
 }

@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="User ID"
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:layout_marginTop="10dp"
+            android:hint="First Name"
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="Age"
+            android:inputType="number"
+            android:maxLength="3"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="Email ID"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:password="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/editReenterPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/customeditbox"
+            android:fontFamily="segoe UI"
+            android:hint="Re-enter Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:password="true"
+            android:textColor="#222222"
+            android:textColorHint="#999999" />
+
+
+    <Button
+        android:layout_marginTop="65dp"
+        android:id="@+id/loginButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#6FDC8A"
+        android:fontFamily="segoe UI"
+        android:gravity="center"
+
+        android:textColor="#ffffff"
+        android:text="REGISTER"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal" />
+
+
+
+
+</LinearLayout>
