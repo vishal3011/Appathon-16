@@ -45,7 +45,6 @@ public class ActivityUserProfile extends AppCompatActivity {
         textView.setText("Welcome User " + intent.getStringExtra(LoginActivity.KEY_USERNAME));
 
         mDrawerList = (ListView) findViewById(R.id.navList);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
 
         addDrawerItems();
@@ -98,7 +97,6 @@ public class ActivityUserProfile extends AppCompatActivity {
         };
 
         mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
 

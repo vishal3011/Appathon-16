@@ -13,7 +13,9 @@ import android.widget.Spinner;
 public class EditPostActivity extends AppCompatActivity {
 
     private Spinner spinner;
+    private Spinner spinnerCategory;
     private static final String[]categories = {"item 1", "item 2", "item 3"};
+    private static final String[]choice = {"Issue", "Aid"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +24,21 @@ public class EditPostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_post);
 
         spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<String>adapter = new ArrayAdapter<String>(EditPostActivity.this,
+        spinnerCategory = (Spinner)findViewById(R.id.spinnerCategory);
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(EditPostActivity.this,
                 android.R.layout.simple_spinner_item,categories);
 
 
         spinner.setAdapter(adapter);
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(EditPostActivity.this,
+                android.R.layout.simple_spinner_item,choice);
+
+
+        spinnerCategory.setAdapter(adapter2);
+
 
 
 
