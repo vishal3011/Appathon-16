@@ -24,21 +24,28 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import static android.util.Log.*;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     public static final String LOGIN_URL = "http://rajukoushik.pythonanywhere.com/api/login";
-
+    public String UserName = "";
     public static final String KEY_USERNAME="user_name";
     public static final String KEY_PASSWORD="password";
-
+    public String[] posttext=new String[1000];
+    public String[] postitle=new String[1000];
+    public String[] username=new String[1000];
+    public String message;
     private EditText editTextUsername;
     private EditText editTextPassword;
     private Button buttonLogin;
@@ -70,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void userLogin() {
         user_name = editTextUsername.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
-
+        UserName = user_name;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -83,11 +90,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             if(code == 404)
                             {
                                 Toast.makeText(LoginActivity.this,message,Toast.LENGTH_LONG).show();
-
+                                Log.e("tag", response);
                             }
                             else
                             {
                                 Toast.makeText(LoginActivity.this,"Yo bro !!",Toast.LENGTH_LONG).show();
+                                Log.e("tag", response);
+
+                                ArrayList<PostModel> arr = new ArrayList<>();
+
+                                JSONArray jr = jobj.getJSONArray("posttext");
+                                JSONArray jr1 = jobj.getJSONArray("posttitles");
+                                JSONArray jr2 = jobj.getJSONArray("username");
+
+                                for(int i=0;i<posttext.length;i++)
+                                {
+
+
+                                    posttext[i] = jr.getJSONObject(i).toString();
+                                    postitle[i] = jr1.getJSONObject(i).toString();
+                                    username[i] = jr2.getJSONObject(i).toString();
+                                    arr.add(new PostModel(username[i],posttext[i],username[i]));
+
+                                }
+
+
+                                Adapter.getbInstance(LoginActivity.this).setPostsList(arr);
+
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -98,6 +127,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             openProfile();
                         }else{
                             Toast.makeText(LoginActivity.this,response,Toast.LENGTH_LONG).show();
+                            Log.e("tag", response);
+
                         }
                     }
                 },
@@ -105,6 +136,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(LoginActivity.this,error.toString(),Toast.LENGTH_LONG ).show();
+
+
                     }
                 }){
             @Override

@@ -29,6 +29,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PostViewHolder> {
     DrawerLayout drawerLayout;
 
     public static Adapter bInstance;
+    private static Adapter mInstance;
 
     public Adapter(Context context,DrawerLayout drawerLayout){
 
@@ -40,10 +41,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PostViewHolder> {
         //  this.groupsList=list;
     }
 
+
+
     public Adapter(Context context){
 
         this.context=context;
 
+    }
+
+    public static Adapter getbInstance(Context c){
+        if(mInstance==null){
+            mInstance = new Adapter(c);
+        }
+        return mInstance;
     }
 
     public static Adapter getInstance(Context context){
@@ -57,6 +67,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PostViewHolder> {
     public void setPostsList(ArrayList<PostModel> glist){
         this.PostList=glist;
     }
+
 
     class PostViewHolder extends RecyclerView.ViewHolder {
 

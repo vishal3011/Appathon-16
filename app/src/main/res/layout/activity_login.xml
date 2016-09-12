@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/loginPage"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#00223E"
+    android:background="#ffffff"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingLeft="10dp"
@@ -13,9 +13,10 @@
         android:layout_marginTop="-100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logol"
+        android:src="@drawable/logotxt"
         android:focusable="false"
         android:longClickable="false"
+        android:layout_marginBottom="30dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         />
@@ -57,33 +58,17 @@
             android:textColorHint="#999999"
             />
 
-        <CheckBox
-            android:id="@+id/showPass"
-            android:padding="2dp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#00223E"
-            android:ellipsize="start"
-            android:fontFamily="segoe UI"
-            android:gravity="left|center"
-            android:layout_gravity="center"
-            android:text="Show Password?"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            android:textColor="#ffffff"
-            android:checked="false"
-            android:theme="@style/AppTheme" />
+
 
         <Button
             android:layout_marginTop="65dp"
             android:id="@+id/buttonLogin"
             android:layout_width="fill_parent"
             android:layout_height="50sp"
-            android:background="#6FDC8A"
+            android:background="#800080"
             android:fontFamily="segoe UI"
             android:gravity="center"
-
+            android:onClick="onClick"
             android:textColor="#ffffff"
             android:text="LOGIN"
             android:textSize="15sp"

@@ -12,16 +12,13 @@ public class PostModel
 
 
 
-    public PostModel(String post_name, String post_text, String user_name, String post_tag, String post_catid)
+    public PostModel(String post_name, String post_text, String user_name)
     {
 
         this.post_name = post_name;
         this.post_text = post_text;
         this.user_name = user_name;
 
-
-        this.post_tag = post_tag;
-        this.post_catid = post_catid;
 
     }
 }

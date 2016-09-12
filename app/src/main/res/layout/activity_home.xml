@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/one"
+            android:layout_weight="1">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            cardView:cardBackgroundColor="#ffffff"
+            cardView:cardCornerRadius="2dp">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/above"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/upperSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="118dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/TagChar"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/tag_bg"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="F"
+                                android:textColor="#ffffff"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/user_name"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Gender Equality"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/post_name"
+
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:text="->"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/actual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:text="Issue"
+                            android:textSize="15dp" />
+
+
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lowerSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/above"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/post_divider" />
+
+                    <TextView
+                        android:id="@+id/post_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:text="Discrimination against women has to be stopped.Femal employees are being offered only steriotypical jobs at Endevaour."
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/two"
+            android:layout_weight="1"
+        >
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:elevation="5dp"
+            cardView:cardBackgroundColor="#ffffff"
+            cardView:cardCornerRadius="2dp">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLay1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/above1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/upperSection1"
+                        android:layout_width="match_parent"
+                        android:layout_height="118dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/TagChar1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/tag_bg"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="F"
+                                android:textColor="#ffffff"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/user_name1"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Education and Employement"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/post_name1"
+
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:text="->"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/actual1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:text="Issue"
+                            android:textSize="15dp" />
+
+
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lowerSection1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/above"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/post_divider" />
+
+                    <TextView
+                        android:id="@+id/post_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:text="Girl students are not allowed in Jhonson Grammar School , Hyderabad. Pleadse change the attitude."
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/three"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    cardView:cardBackgroundColor="#ffffff"
+                    cardView:cardCornerRadius="2dp">
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/linearLay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/above2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/upperSection2"
+                                android:layout_width="match_parent"
+                                android:layout_height="118dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5dp">
+
+                                    <TextView
+                                        android:id="@+id/TagChar2"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/tag_bg"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:text="A"
+                                        android:textColor="#ffffff"
+                                        android:textSize="20dp" />
+
+                                </RelativeLayout>
+
+
+                                <TextView
+                                    android:id="@+id/user_name2"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="refine"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/post_name2"
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="40dp"
+                                    android:text="->"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/actual2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="actual"
+                                    android:textSize="15dp" />
+
+
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lowerSection2"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/above"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:id="@+id/divider2"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@drawable/post_divider" />
+
+                            <TextView
+                                android:id="@+id/post_text2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="13dp"
+                                android:text="hello dear how are u. this is tlest text for the textview.How is the feel of card design . theset seems to be too bcu. hello ankit how are u this is test for uouankd.this ifo not ant thisthandk thandks helllo"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/four"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    cardView:cardBackgroundColor="#ffffff"
+                    cardView:cardCornerRadius="2dp">
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/linearLay3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/above3"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/upperSection3"
+                                android:layout_width="match_parent"
+                                android:layout_height="118dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5dp">
+
+                                    <TextView
+                                        android:id="@+id/TagChar3"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/tag_bg"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:text="A"
+                                        android:textColor="#ffffff"
+                                        android:textSize="20dp" />
+
+                                </RelativeLayout>
+
+
+                                <TextView
+                                    android:id="@+id/user_name3"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="refine"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/post_name3"
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="40dp"
+                                    android:text="->"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/actual3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="actual"
+                                    android:textSize="15dp" />
+
+
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lowerSection3"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/above"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:id="@+id/divider3"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@drawable/post_divider" />
+
+                            <TextView
+                                android:id="@+id/post_text3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="13dp"
+                                android:text="hello dear how are u. this is tlest text for the textview.How is the feel of card design . theset seems to be too bcu. hello ankit how are u this is test for uouankd.this ifo not ant thisthandk thandks helllo"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

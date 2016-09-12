@@ -36,19 +36,8 @@ public class ActivityUserProfile extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.test);
 
-        textView = (TextView) findViewById(R.id.textViewUsername);
-
-        Intent intent = getIntent();
-
-        textView.setText("Welcome User " + intent.getStringExtra(LoginActivity.KEY_USERNAME));
-
-        mDrawerList = (ListView) findViewById(R.id.navList);
-
-
-        addDrawerItems();
-        setupDrawer();
 
 
         buttonFabPost = (FloatingActionButton) findViewById(R.id.fab_post);
@@ -63,41 +52,7 @@ public class ActivityUserProfile extends AppCompatActivity {
     }
 
 
-    private void addDrawerItems() {
-        Log.i("MainActivity:", "Setting up drawer");
-        String[] cats = {"Women Rights", "Safety & Security","Health","Gender Equality","Education","Miscellaneous"};
 
-        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cats);
-        mDrawerList.setAdapter(mAdapter);
-
-        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-        });
-    }
-
-    private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
-
-            /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Navigation");
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                getSupportActionBar().setTitle("TheFemiApp");
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-    }
 
 
 
